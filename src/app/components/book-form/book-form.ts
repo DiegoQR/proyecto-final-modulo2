@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Book } from '../../interfaces/book';
 import BookService from '../../services/book-service';
@@ -21,13 +21,13 @@ export default class BookForm {
   constructor() {
     this.bookForm = this.fb.group({
       id:[Math.floor(Math.random() * 1000000)],
-      title: [''],
-      author: [''],
-      publisher: [''],
-      genre: [''],
-      publicationDate: [''],
-      price: [''],
-      stock: [''],
+      title: ['', Validators.required],
+      author: ['', Validators.required],
+      publisher: ['', Validators.required],
+      genre: ['', Validators.required],
+      publicationDate: ['', Validators.required],
+      price: ['', [Validators.required, Validators.min(0)]],
+      stock: ['', [Validators.required, Validators.min(0)]],
     });
   }
   
@@ -44,6 +44,31 @@ export default class BookForm {
         }
       });
     }
+  }
+
+  getErrorMessage(fieldName: string): string{
+    const control = this.bookForm.get(fieldName);
+
+    if(control?.hasError('required')){
+      return `${fieldName} es requerido`
+    }
+
+    if (control?.hasError('minLength')){
+      const minLength = control.errors?.['minLength'].requiredLength;
+      return `${fieldName} debe tener al menor ${minLength} caracteres`;
+    }
+
+    if (control?.hasError('min')){
+      const min = control.errors?.['min'].min;
+      return `${fieldName} debe ser al menos ${min}`;
+    }
+
+    return '';
+  }
+
+  isFieldInvalid(fieldName: string): boolean {
+    const control = this.bookForm.get(fieldName);
+    return !!(control?.invalid && control?.touched);
   }
 
   onBack(): void {
