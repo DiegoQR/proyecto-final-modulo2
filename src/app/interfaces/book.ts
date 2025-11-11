@@ -8,15 +8,7 @@ export interface Book {
     author:          string;
     publisher:       string;
     genre:           string;
-    isbn:            string;
     publicationDate: Date;
-    pages:           number;
     price:           number;
     stock:           number;
-    language:        string;
-    country:         string;
-    rating:          number;
-    available:       boolean;
-    bestseller:      boolean;
-    description:     string;
 }

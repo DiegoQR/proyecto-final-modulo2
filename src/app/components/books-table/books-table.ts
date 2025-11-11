@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component, inject, OnInit, signal } from '@ang
 import BookService from '../../services/book-service';
 import { Book } from '../../interfaces/book';
 import { CommonModule, CurrencyPipe, DatePipe } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'books-table',
@@ -10,8 +11,10 @@ import { CommonModule, CurrencyPipe, DatePipe } from '@angular/common';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
   
-export class BooksTable implements OnInit {
+export default class BooksTable implements OnInit {
   private bookService = inject(BookService);
+  private router = inject(Router);
+
   books = signal<Book[]>([]);
   loading = signal<Boolean>(false);
   error = signal<string | null>(null);
@@ -35,5 +38,8 @@ export class BooksTable implements OnInit {
     this.loadBooks();
   }
 
+  onAddBook(): void {
+    this.router.navigate(['/new-book']);
+  }
 }
 

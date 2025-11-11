@@ -1,9 +1,9 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { BooksTable } from "../../components/books-table/books-table";
+import { RouterOutlet } from "@angular/router";
 
 @Component({
   selector: 'app-home',
-  imports: [BooksTable],
+  imports: [RouterOutlet],
   templateUrl: './home.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

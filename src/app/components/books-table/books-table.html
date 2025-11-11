@@ -1,39 +1,44 @@
-<table class="w-full">
-    <thead class="bg-gray-400 text-left h-10">
-        <tr>
-            <th>Titulo</th>
-            <th>Autor</th>
-            <th>Publicador</th>
-            <th>Genero</th>
-            <th>Fecha de publicación</th>
-            <th>Precio</th>
-            <th>Stock</th>
-            <th>Ver detalles</th>
-        </tr>
-    </thead>
-    <tbody>
-        @if (loading()) {
+<section class="m-5 space-y-5">
+    <button class="button-primary" (click)="onAddBook()">
+        Añadir Libro
+    </button>
+    <table class="w-full">
+        <thead class="bg-gray-400 text-left h-10">
             <tr>
-                <td colspan="8" class="text-center p-4">Cargando libros...</td>
+                <th>Titulo</th>
+                <th>Autor</th>
+                <th>Publicador</th>
+                <th>Genero</th>
+                <th>Fecha de publicación</th>
+                <th>Precio</th>
+                <th>Stock</th>
+                <th>Ver detalles</th>
             </tr>
-        } @else if (books().length === 0) {
-            <tr>
-                <td colspan="8" class="text-center p-4">No se encontraron libros.</td>
-            </tr>
-        }  @else {
-            @for (book of books(); track $index) {
-                <tr class="border-b h-10" [class.bg-gray-300]="$index % 2 !== 0">
-                    <td>{{ book.title }}</td>
-                    <td>{{ book.author }}</td>
-                    <td>{{ book.publisher }}</td>
-                    <td>{{ book.genre }}</td>
-                    <td>{{ book.publicationDate | date:'dd/MM/yyyy' }}</td>
-                    <td>{{ book.price | currency:'USD' }}</td>
-                    <td [class.text-green-600]="book.stock > 0" [class.text-red-600]="book.stock === 0">{{ book.stock > 0 ? 'Con Stock' : 'Sin Stock' }}</td>
-                    <td><a href="/books/1" class="text-blue-500 hover:underline">Detalles</a></td>
+        </thead>
+        <tbody>
+            @if (loading()) {
+                <tr>
+                    <td colspan="8" class="text-center p-4">Cargando libros...</td>
                 </tr>
+            } @else if (books().length === 0) {
+                <tr>
+                    <td colspan="8" class="text-center p-4">No se encontraron libros.</td>
+                </tr>
+            }  @else {
+                @for (book of books(); track $index) {
+                    <tr class="border-b h-10" [class.bg-gray-300]="$index % 2 !== 0">
+                        <td>{{ book.title }}</td>
+                        <td>{{ book.author }}</td>
+                        <td>{{ book.publisher }}</td>
+                        <td>{{ book.genre }}</td>
+                        <td>{{ book.publicationDate | date:'dd/MM/yyyy' }}</td>
+                        <td>{{ book.price | currency:'USD' }}</td>
+                        <td [class.text-green-600]="book.stock > 0" [class.text-red-600]="book.stock === 0">{{ book.stock > 0 ? 'Con Stock' : 'Sin Stock' }}</td>
+                        <td><a href="/books/1" class="text-blue-500 hover:underline">Detalles</a></td>
+                    </tr>
+                }
             }
-        }
-        
-    </tbody>
-</table>
+            
+        </tbody>
+    </table>
+</section>
