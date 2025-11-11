@@ -3,6 +3,7 @@ import BookService from '../../services/book-service';
 import { Book } from '../../interfaces/book';
 import { CommonModule, CurrencyPipe, DatePipe } from '@angular/common';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'books-table',
@@ -18,6 +19,8 @@ export default class BooksTable implements OnInit {
   books = signal<Book[]>([]);
   loading = signal<Boolean>(false);
   error = signal<string | null>(null);
+
+  public books$: Observable<Book[]> = this.bookService.getBooks();
 
   loadBooks(): void {
     this.loading.set(true);
