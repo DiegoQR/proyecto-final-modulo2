@@ -1,6 +1,9 @@
 # Proyecto Final Modulo 2 
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.9.
+Este proyecto fue creado usando: 
+- [Angular CLI](https://github.com/angular/angular-cli) version 20.3.9.
+- [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss) version 4.1
+- [json-server](https://github.com/typicode/json-server)
 
 ## Iniciar entorno de desarrollo
 
