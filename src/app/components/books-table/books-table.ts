@@ -20,8 +20,6 @@ export default class BooksTable implements OnInit {
   loading = signal<Boolean>(false);
   error = signal<string | null>(null);
 
-  public books$: Observable<Book[]> = this.bookService.getBooks();
-
   loadBooks(): void {
     this.loading.set(true);
     this.error.set(null);

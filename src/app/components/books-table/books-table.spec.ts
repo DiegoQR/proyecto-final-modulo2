@@ -59,14 +59,15 @@ describe("BooksTable Component Tests", () => {
         expect(component).toBeTruthy();
     });
 
-    it("should load books on initialization", (done) => {
+    it('should load books on initialization', () => {
         fixture.detectChanges();
-        
-        component.books$.subscribe(books => {
-            expect(books).toEqual(mockBooks);
-            expect(books.length).toBe(2);
-            done();
-        });
+
+        component.ngOnInit();
+
+        expect(component.books()).toEqual(mockBooks);
+        expect(bookService.getBooks).toHaveBeenCalled();
+        expect(component.loading()).toBeFalse();
+        expect(component.error()).toBeNull();
     });
 
     it("should navigate to new book page on add book", () => {
@@ -81,25 +82,25 @@ describe("BooksTable Component Tests", () => {
         expect(router.navigate).toHaveBeenCalledWith(['/edit-book', bookId]);
     });
 
-    it("should call deleteBook on service when deleting a book", done => {
-        const idBookToDelete = 1;
-        const updatedBooks = mockBooks.filter(book => book.id !== idBookToDelete);
-
+    it("should delete book and reload books on delete book", () => {
         spyOn(window, 'confirm').and.returnValue(true);
+        spyOn(window, 'alert');
+        const bookId = 1;
 
+        fixture.detectChanges();
         bookService.deleteBook.and.returnValue(of(void 0));
-        bookService.getBooks.and.returnValue(of(updatedBooks));
+        component.onDeleteBook(bookId);
 
-        component.onDeleteBook(idBookToDelete);
-        
-        expect(window.confirm).toHaveBeenCalledWith('¿Estás seguro de que deseas eliminar este libro?');
-        expect(bookService.deleteBook).toHaveBeenCalledWith(idBookToDelete);
+        expect(bookService.deleteBook).toHaveBeenCalledWith(bookId);
+        expect(window.alert).toHaveBeenCalledWith('Libro eliminado exitosamente.');
+        expect(bookService.getBooks).toHaveBeenCalledTimes(2);
+    });
 
+    it("should not delete book if user cancels", () => {
+        spyOn(window, 'confirm').and.returnValue(false);
+        const bookId = 1;
+        component.onDeleteBook(bookId);
 
-        component.books$.subscribe(book => {
-            expect(book.length).toBe(1);
-            expect(bookService.getBooks).toHaveBeenCalledTimes(2);
-            done();
-        });
+        expect(bookService.deleteBook).not.toHaveBeenCalled();
     });
 });
