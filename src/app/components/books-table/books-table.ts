@@ -41,5 +41,24 @@ export default class BooksTable implements OnInit {
   onAddBook(): void {
     this.router.navigate(['/new-book']);
   }
+
+  onEditBook(bookId: number): void {
+    this.router.navigate(['/edit-book', bookId]);
+  }
+
+  onDeleteBook(bookId: number): void {
+    if(confirm('¿Estás seguro de que deseas eliminar este libro?')) {
+      this.bookService.deleteBook(bookId).subscribe({
+        next: () => {
+          alert('Libro eliminado exitosamente.');
+          this.loadBooks();
+        },
+        error: (err) => {
+          console.error('Error al eliminar el libro:', err);
+          alert('Error al eliminar el libro. Por favor, inténtalo de nuevo.');
+        }
+      });
+    }
+  }
 }
 

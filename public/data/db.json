@@ -1,7 +1,7 @@
 {
   "books": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Cien años de soledad",
       "author": "Gabriel García Márquez",
       "publisher": "Editorial Sudamericana",
@@ -11,7 +11,7 @@
       "stock": 45
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "1984",
       "author": "George Orwell",
       "publisher": "Secker & Warburg",
@@ -21,7 +21,7 @@
       "stock": 67
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "El principito",
       "author": "Antoine de Saint-Exupéry",
       "publisher": "Reynal & Hitchcock",
@@ -31,7 +31,7 @@
       "stock": 120
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Don Quijote de la Mancha",
       "author": "Miguel de Cervantes",
       "publisher": "Francisco de Robles",
@@ -41,7 +41,7 @@
       "stock": 32
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "Orgullo y prejuicio",
       "author": "Jane Austen",
       "publisher": "T. Egerton",
@@ -51,7 +51,7 @@
       "stock": 58
     },
     {
-      "id": 6,
+      "id": "6",
       "title": "Crimen y castigo",
       "author": "Fiódor Dostoyevski",
       "publisher": "The Russian Messenger",
@@ -61,7 +61,7 @@
       "stock": 28
     },
     {
-      "id": 7,
+      "id": "7",
       "title": "El código Da Vinci",
       "author": "Dan Brown",
       "publisher": "Doubleday",
@@ -71,7 +71,7 @@
       "stock": 0
     },
     {
-      "id": 8,
+      "id": "8",
       "title": "La sombra del viento",
       "author": "Carlos Ruiz Zafón",
       "publisher": "Planeta",
@@ -81,7 +81,7 @@
       "stock": 41
     },
     {
-      "id": 9,
+      "id": "9",
       "title": "Sapiens: De animales a dioses",
       "author": "Yuval Noah Harari",
       "publisher": "Debate",
@@ -91,7 +91,7 @@
       "stock": 73
     },
     {
-      "id": 10,
+      "id": "10",
       "title": "El hobbit",
       "author": "J.R.R. Tolkien",
       "publisher": "George Allen & Unwin",
@@ -101,7 +101,7 @@
       "stock": 89
     },
     {
-      "id": 11,
+      "id": "11",
       "title": "Matar a un ruiseñor",
       "author": "Harper Lee",
       "publisher": "J.B. Lippincott & Co",
@@ -111,7 +111,7 @@
       "stock": 52
     },
     {
-      "id": 12,
+      "id": "12",
       "title": "El amor en los tiempos del cólera",
       "author": "Gabriel García Márquez",
       "publisher": "Oveja Negra",
@@ -121,7 +121,7 @@
       "stock": 38
     },
     {
-      "id": 13,
+      "id": "13",
       "title": "El señor de los anillos: La comunidad del anillo",
       "author": "J.R.R. Tolkien",
       "publisher": "George Allen & Unwin",
@@ -131,7 +131,7 @@
       "stock": 65
     },
     {
-      "id": 14,
+      "id": "14",
       "title": "Harry Potter y la piedra filosofal",
       "author": "J.K. Rowling",
       "publisher": "Bloomsbury",
@@ -141,7 +141,7 @@
       "stock": 150
     },
     {
-      "id": 15,
+      "id": "15",
       "title": "La metamorfosis",
       "author": "Franz Kafka",
       "publisher": "Kurt Wolff Verlag",
@@ -151,7 +151,7 @@
       "stock": 44
     },
     {
-      "id": 16,
+      "id": "16",
       "title": "Los miserables",
       "author": "Victor Hugo",
       "publisher": "A. Lacroix, Verboeckhoven & Cie",
@@ -161,7 +161,7 @@
       "stock": 19
     },
     {
-      "id": 17,
+      "id": "17",
       "title": "El gran Gatsby",
       "author": "F. Scott Fitzgerald",
       "publisher": "Charles Scribner's Sons",
@@ -171,7 +171,7 @@
       "stock": 76
     },
     {
-      "id": 18,
+      "id": "18",
       "title": "Fahrenheit 451",
       "author": "Ray Bradbury",
       "publisher": "Ballantine Books",
@@ -181,7 +181,7 @@
       "stock": 0
     },
     {
-      "id": 19,
+      "id": "19",
       "title": "El retrato de Dorian Gray",
       "author": "Oscar Wilde",
       "publisher": "Ward, Lock and Company",
@@ -191,7 +191,7 @@
       "stock": 61
     },
     {
-      "id": 20,
+      "id": "20",
       "title": "Crónica de una muerte anunciada",
       "author": "Gabriel García Márquez",
       "publisher": "Editorial Sudamericana",
@@ -199,26 +199,6 @@
       "publicationDate": "1981-04-01",
       "price": 10.99,
       "stock": 94
-    },
-    {
-      "id": 0,
-      "title": "Prueba",
-      "author": "Diego QR",
-      "publisher": "Editorial Patito",
-      "genre": "Terror",
-      "publicationDate": "2025-11-05",
-      "price": 35,
-      "stock": 23
-    },
-    {
-      "id": 0,
-      "title": "Prueba 2",
-      "author": "Chubi",
-      "publisher": "Editorial Patito",
-      "genre": "Fantasia",
-      "publicationDate": "2025-10-16",
-      "price": 12,
-      "stock": 32
     }
   ]
 }

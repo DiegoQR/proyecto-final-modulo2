@@ -30,3 +30,17 @@ h1 {
 .button-secondary:hover {
   @apply bg-gray-700 cursor-pointer;
 }
+
+.button-danger {
+  @apply bg-red-500 text-white font-bold py-2 px-4 rounded;
+}
+.button-danger:hover {
+  @apply bg-red-700 cursor-pointer;
+}
+
+.button-warning {
+  @apply bg-yellow-500 text-white font-bold py-2 px-4 rounded;
+}
+.button-warning:hover {
+  @apply bg-yellow-700 cursor-pointer;
+}

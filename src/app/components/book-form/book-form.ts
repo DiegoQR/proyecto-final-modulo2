@@ -20,7 +20,7 @@ export default class BookForm {
 
   constructor() {
     this.bookForm = this.fb.group({
-      id:[0],
+      id:[Math.floor(Math.random() * 1000000)],
       title: [''],
       author: [''],
       publisher: [''],
