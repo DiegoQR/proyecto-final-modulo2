@@ -8,6 +8,10 @@ export const homeRoutes: Routes = [
     {
         path: 'new-book',
         loadComponent: () => import('../../components/book-form/book-form')
+    },
+    {
+        path: 'edit-book/:id',
+        loadComponent: () => import('../../components/book-edit/book-edit')
     }
 ];
 

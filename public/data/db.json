@@ -178,7 +178,7 @@
       "genre": "Ciencia ficción",
       "publicationDate": "1953-10-19",
       "price": 13.5,
-      "stock": 0
+      "stock": 21
     },
     {
       "id": "19",
@@ -199,6 +199,16 @@
       "publicationDate": "1981-04-01",
       "price": 10.99,
       "stock": 94
+    },
+    {
+      "id": "28709",
+      "title": "IT",
+      "author": "Diego QR",
+      "publisher": "Editorial Patito",
+      "genre": "Fantasia",
+      "publicationDate": "2025-11-08",
+      "price": 32.99,
+      "stock": 12
     }
   ]
 }
