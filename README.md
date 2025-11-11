@@ -1,59 +1,32 @@
-# ProyectoFinalModulo2
+# Proyecto Final Modulo 2 
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.9.
 
-## Development server
+## Iniciar entorno de desarrollo
 
-To start a local development server, run:
-
-```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+para iniciar el entorno de desarrollo ejecutar primero el comando después de instalar las dependencias para levantar el servidor JSON:
 
 ```bash
-ng generate component component-name
+npx json-server ./public/data/db.json
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Para ejecutar el proyecto en local ejecutar el comando:
 
 ```bash
-ng generate --help
+npm run start
 ```
 
-## Building
+## Testing
 
-To build the project run:
-
+Para ejecutar los test unitarios ejecutar el comando:
 ```bash
-ng build
+npm run test
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+# Capturas de pantalla
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+![Captura1](https://res.cloudinary.com/dho0rif9d/image/upload/v1762901001/capturas-proyectos/Captura_de_pantalla_2025-11-11_184308_aw3trp.png)
+![Captura2](https://res.cloudinary.com/dho0rif9d/image/upload/v1762901024/capturas-proyectos/Captura_de_pantalla_2025-11-11_184335_nnkzny.png)
+![Captura3](https://res.cloudinary.com/dho0rif9d/image/upload/v1762901081/capturas-proyectos/Captura_de_pantalla_2025-11-11_184430_b0yo7s.png)
+![Captura4](https://res.cloudinary.com/dho0rif9d/image/upload/v1762901137/capturas-proyectos/Captura_de_pantalla_2025-11-11_184524_umyhlt.png)
+![Captura5](https://res.cloudinary.com/dho0rif9d/image/upload/v1762901172/capturas-proyectos/Captura_de_pantalla_2025-11-11_184601_qqvmab.png)

@@ -1,7 +1,7 @@
 <section class="m-5 space-y-5">
     <button class="button-secondary" (click)="onBack()">Volver</button>
     <form [formGroup]="bookForm" class="space-y-4 max-w-lg mx-auto" (ngSubmit)="onSubmit()">
-        <h1>Añadir nuevo libro</h1>
+        <h1>Editar libro</h1>
         <div>
             <label for="title" class="block font-medium mb-1">Título:</label>
             <input id="title" formControlName="title" required class="w-full border border-gray-300 p-2 rounded" [class.border-red-500]="isFieldInvalid('title')" />
